@@ -2,7 +2,7 @@
 // @name         Get JLPT Level From Jisho
 // @namespace    https://github.com/jarmanso7/Get-JLPT-Level-From-Jisho-userscript
 // @version      0.1
-// @description  Injects a <div> tag containing the JLPT info for a given word obtained from jisho.org if available.
+// @description  Shows an alert containing the JLPT info for a given word obtained from jisho.org if available.
 // @author       jarmanso7
 // @match        http://*.memrise.com/*
 // @match        https://*.memrise.com/*
@@ -51,7 +51,6 @@ function existsAtLeastOneExactWordMatch(doc){
  * Returns an string containing the JLPT information if found. Returns null if the word does not have JLPT information or not
  */
 function getJLPTInfoIfExisting(firstExactMatch){
-    debugger;
     //There might be several <span class="concept_light clearfix"></span> tags corresponding to this word, either related or not to the JLPT level.
     var ArrayOfConceptLightClearfixSpanTags = firstExactMatch.getElementsByClassName("concept_light clearfix")[0].getElementsByClassName("concept_light-tag label");
 
