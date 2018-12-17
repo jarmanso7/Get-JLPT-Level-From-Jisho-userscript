@@ -70,14 +70,17 @@ function getJLPTInfoIfExisting(firstExactMatch){
 (function() {
     'use strict';
 
-    //Example: look up JLPT level for the word うち
-    var url = "https://jisho.org/search/" + encodeURIComponent("うち");
+  //Example: look up JLPT level for the word うち
+  var word = prompt("Please enter a word", "うち");
+    
+  if (word != null) {     
+    var url = "https://jisho.org/search/" + encodeURIComponent(word);
 
     //Make use of a proxy to avoid CORS and request the results from jisho.org from any domain
     const proxyurl = "https://cors-anywhere.herokuapp.com/";
     fetch(proxyurl + url)
         .then(response => response.text())
         .then(contents => extractJLPTInfoFromJishoPage(contents))
-        .catch((err) => alert(err))
-
+        .catch((err) => alert(err))   
+  }
 })();
