@@ -71,7 +71,7 @@ function getJLPTInfoIfExisting(firstExactMatch){
     'use strict';
 
     //Example: look up JLPT level for the word うち
-    var url = "https://jisho.org/search/" + encodeURIComponent("うち")
+    var url = "https://jisho.org/search/" + encodeURIComponent("うち");
 
     //Make use of a proxy to avoid CORS and request the results from jisho.org from any domain
     const proxyurl = "https://cors-anywhere.herokuapp.com/";
