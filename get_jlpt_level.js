@@ -4,7 +4,8 @@
 // @version      0.1
 // @description  Shows an alert containing the JLPT info for a given word obtained from jisho.org if available.
 // @author       jarmanso7
-// @match        http://*.mysite.com/*
+// @match        http://*.memrise.com/*
+// @match        https://*.memrise.com/*
 // @grant        none
 // ==/UserScript==
 
